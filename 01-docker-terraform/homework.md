@@ -234,6 +234,7 @@ Which of the following sequences, respectively, describes the workflow for:
 3. Remove all resources managed by terraform`
 
 Answers:
+
 - terraform import, terraform apply -y, terraform destroy
 - teraform init, terraform plan -auto-apply, terraform rm
 - terraform init, terraform run -auto-approve, terraform destroy
@@ -241,8 +242,7 @@ Answers:
 - terraform import, terraform apply -y, terraform rm
 
 ```
-Ans is --> 
-Reason:
+Ans is --> terraform init, terraform apply -auto-approve, terraform destroy
 
 ```
 
