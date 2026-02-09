@@ -272,3 +272,5 @@ cache/*
 *secret*
 *credential*
 *key*
+
+**/*assigment.sql
