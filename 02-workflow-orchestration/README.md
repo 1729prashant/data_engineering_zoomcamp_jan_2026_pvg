@@ -11,7 +11,11 @@ Complete the quiz shown below. It's a set of 6 multiple-choice questions to test
 
 ```
 Ans is --> 134.5 MB 
-
+UPDATE: 
+ans is 128.3 MiB, 
+note that the question asks MiB and not MB, 
+MiB is 1024 x 1024(exact powers of 2) and MB is 1000 x 1000 (decimal)..
+GCP is showing MB and not MiB
 ```
 --
 ![alt text](screenshots/1.png "Title")
