@@ -1,0 +1,22 @@
+services:
+  dbt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dbt-duckdb
+    ports:
+      - "8080:8080"    # Add this line
+    volumes:
+      # Mount the entire taxi_rides_ny project directory
+      - ./taxi_rides_ny:/app/taxi_rides_ny
+      # Mount downloaded data files (read-only, already converted locally)
+      - ./data:/app/taxi_rides_ny/data:ro
+      # Mount dbt profiles
+      - ./profiles.yml:/root/.dbt/profiles.yml:ro
+      # Mount the load script
+      - ./ingest_data.py:/app/ingest_data.py:ro
+    working_dir: /app/taxi_rides_ny
+    stdin_open: true
+    tty: true
+    entrypoint: ["/app/entrypoint.sh"]
+    command: ["bash"]

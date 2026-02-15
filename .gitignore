@@ -49,6 +49,7 @@ coverage.xml
 *.py.cover
 .hypothesis/
 .pytest_cache/
+.pytest_cache/*
 cover/
 
 # Translations
@@ -143,6 +144,10 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.env.local
+.venv/
+venv/*
+.python-version
 
 # Spyder project settings
 .spyderproject
@@ -275,3 +280,54 @@ cache/*
 
 **/*assigment.sql
 assigment.sql
+
+# duckdb
+*.duckdb
+
+
+**/*target
+dbt_packages/
+
+
+*.sqlite
+*.db 
+*.bak
+
+
+.aws/
+credentials
+*.pem
+*.key
+
+logs/*
+
+
+target/
+dbt_modules/
+dbt_packages/
+logs/
+venv/
+__pycache__
+.tox/
+/.pytest_cache/
+# Ignore all directories that start with 'env-' and can have any name after
+env*/
+# Do not ignore .env files in any directory and do not ignore .env directories
+!.env
+!*/.env/
+# But explicitly ignore test.env files
+test.env
+dbt_internal_packages/
+
+
+# dbt artifacts
+.data_loaded
+.seeds_loaded
+*.duckdb.wal
+*.duckdb.tmp
+
+# Data directory (parquet files already covered by *.parquet)
+data/
+
+# Docker-specific
+.dockerignore
